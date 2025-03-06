@@ -24,48 +24,4 @@ A Delphi 7 application for sending SMS messages through SOAP web service with us
 1. Clone repository:
 ```bash
 git clone https://github.com/hnazarparvar28782/SMSDelphiSender.git
-
-    Open project in Delphi 7:
-
-        Open *.dpr file
-
-    Configure web service:
-
-        Edit sendformunit.pas
-
-        Update credentials:
-    pascal
-    Copy
-
-    userid = 'YOUR_USERNAME';
-    password = 'YOUR_PASSWORD';
-
-    Build & Run:
-    pascal
-    Copy
-
-    Project -> Build Project
-    Run -> Run
-
-🖥 Usage
-
-    Enter 11-digit mobile number 📞
-
-    Type your message ✍️
-
-    Click Send button 🚀
-
-🤝 Contributing
-
-Suggestions and PRs are welcome!
-See CONTRIBUTING.md
-📜 License
-
-MIT License - See LICENSE for details
-🙌 Acknowledgments
-
-    Open source community
-
-    Delphi developers
-
-    SOAP web service providers
+```
