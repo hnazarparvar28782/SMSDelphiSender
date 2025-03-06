@@ -50,7 +50,7 @@ begin
    if Length(emobile.Text) <> 11 then
     begin
     // ����� ����� ��� � �ǘ ���� ���
-    ShowMessage('����� ������ ���� 11 ��� ����.');
+    ShowMessage('The number of digits entered is less than 11!!');
     emobile.Text := '';
     emobile.SetFocus; // ��Ґ������ ���� �� �����
     error:=true;
@@ -58,7 +58,7 @@ begin
 
     if Trim(editmessage.Text) = '' then
   begin
-    ShowMessage('����� ���� �� ���� ����.');
+    ShowMessage('error! Message is Empty! ');
     editmessage.SetFocus; // ��Ґ������ ���� �� �����
     error:=true;
   end;
