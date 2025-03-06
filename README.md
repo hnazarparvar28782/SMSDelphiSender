@@ -25,3 +25,15 @@ A Delphi 7 application for sending SMS messages through SOAP web service with us
 ```bash
 git clone https://github.com/hnazarparvar28782/SMSDelphiSender.git
 ```
+## 🚀 Installation & Usage
+
+**Open Project in Delphi 7:**  
+```bash
+Open *.dpr file
+```
+## Configure Web Service:
+```bash
+Edit sendformunit.pas and update:
+userid = 'YOUR_USERNAME';
+password = 'YOUR_PASSWORD';
+```
