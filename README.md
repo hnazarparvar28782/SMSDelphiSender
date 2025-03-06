@@ -37,3 +37,31 @@ Edit sendformunit.pas and update:
 userid = 'YOUR_USERNAME';
 password = 'YOUR_PASSWORD';
 ```
+Build & Run:
+```bash
+Project -> Build Project
+Run -> Run
+```
+🖥 Usage
+
+    Enter 11-digit mobile number 📞
+
+    Type your message ✍️
+
+    Click Send button 🚀
+
+🤝 Contributing
+
+## Suggestions and PRs are welcome!
+### See CONTRIBUTING.md
+## 📜 License
+
+MIT License - See LICENSE for details
+## 🙌 Acknowledgments
+
+  ###  Open source community
+
+  ###  Delphi developers
+
+  ###   SOAP web service providers
+
