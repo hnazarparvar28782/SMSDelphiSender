@@ -23,4 +23,4 @@ A Delphi 7 application for sending SMS messages through SOAP web service with us
 ## 🚀 Installation
 1. Clone repository:
 ```bash
-git clone https://github.com/yourusername/sms-sender-delphi7.git
+git clone https://github.com/hnazarparvar28782/SMSDelphiSender.git
