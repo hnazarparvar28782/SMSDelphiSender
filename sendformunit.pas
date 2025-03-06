@@ -34,7 +34,7 @@ uses SMSCLass;
 
 procedure TForm1.Button1Click(Sender: TObject);
 var
-  SmsService: SmsSoap; // ÇÓÊİÇÏå ÇÒ ÇíäÊÑİíÓ SmsSoap ÇÒ æÇÍÏ xml.pas
+  SmsService: SmsSoap; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ SmsSoap ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ xml.pas
   RequestData: WideString;
   Result: WideString;
   MessageBody: WideString;
@@ -49,17 +49,17 @@ begin
 
    if Length(emobile.Text) <> 11 then
     begin
-    // äãÇíÔ íÛÇã ÎØÇ æ Ç˜ ˜ÑÏä ãÊä
-    ShowMessage('ÔãÇÑå ãæÈÇíá ÈÇíÏ 11 ÑŞã ÈÇÔÏ.');
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ ï¿½Ç˜ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    ShowMessage('ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 11 ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.');
     emobile.Text := '';
-    emobile.SetFocus; // ÈÇÒÑÏÇäÏä İæ˜æÓ Èå ˜äÊÑá
+    emobile.SetFocus; // ï¿½ï¿½Òï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
     error:=true;
     end;
 
     if Trim(editmessage.Text) = '' then
   begin
-    ShowMessage('áØİÇğ íÇã ÑÇ æÇÑÏ ˜äíÏ.');
-    editmessage.SetFocus; // ÈÇÒÑÏÇäÏä İæ˜æÓ Èå ˜äÊÑá
+    ShowMessage('ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.');
+    editmessage.SetFocus; // ï¿½ï¿½Òï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
     error:=true;
   end;
 
@@ -71,14 +71,14 @@ begin
     Lalert.Visible:=true;
     Form1.Refresh;
 
-    // ÇíÌÇÏ äãæäå ÓÑæíÓ ÈÇ ÇÓÊİÇÏå ÇÒ ÊÇÈÚ GetSmsSoap
-    SmsService := GetSmsSoap(True); // ÇÑÇãÊÑ True ÈÑÇí ÇÓÊİÇÏå ÇÒ WSDL
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ GetSmsSoap
+    SmsService := GetSmsSoap(True); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ True ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ WSDL
 
-    // ÓÇÎÊ XML ÏÑÎæÇÓÊ (ãØÇÈŞ äãæäå PHP)
+    // ï¿½ï¿½ï¿½ï¿½ XML ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ PHP)
     RequestData :=
       '<xmsrequest>' +
-        '<userid>14700</userid>' +
-        '<password>14700</password>' + // ÌÇíÒíäí ÈÇ ÑãÒ æÇŞÚí
+        '<userid>youerserid</userid>' +
+        '<password>yourpassword</password>' + // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
         '<action>smssend</action>' +
         '<body>' +
           '<type>oto</type>' +
@@ -86,15 +86,15 @@ begin
         '</body>' +
       '</xmsrequest>';
 
-    // İÑÇÎæÇäí ãÊÏ XmsRequest æ ÏÑíÇİÊ äÊíÌå
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ XmsRequest ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
     Result := SmsService.XmsRequest(RequestData);
     Lalert.Visible:=false;
      Form1.Refresh;
-    ShowMessage('äÊíÌå ÇÑÓÇá: ' + Result);
+    ShowMessage('ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½: ' + Result);
 
   except
     on E: Exception do
-      ShowMessage('ÎØÇ: ' + E.Message);
+      ShowMessage('ï¿½ï¿½ï¿½: ' + E.Message);
   end;
   end;//endif
 end;
@@ -106,9 +106,9 @@ end;
 
 procedure TForm1.EmobileKeyPress(Sender: TObject; var Key: Char);
 begin
-if not (Key in ['0'..'9', #8]) then // #8 ÈÑÇí ÇÌÇÒå ÏÇÏä Èå Backspace
+if not (Key in ['0'..'9', #8]) then // #8 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Backspace
   begin
-    Key := #0; // ÌáæíÑí ÇÒ æÑæÏ ˜ÇÑÇ˜ÊÑ ÛíÑãÌÇÒ
+    Key := #0; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç˜ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   end;
 end;
 
